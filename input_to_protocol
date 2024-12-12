@@ -1,0 +1,26 @@
+"""input_to_protocol"""
+
+def main():
+
+    """This code takes volumes of NaCl and MgC12 and prints instructions"""
+
+    # user inputs volumes
+    final_vol = float(input("\nPlease enter the final volume of the solution (ml): "))
+    nacl_stock = float(input("Please enter the NaCl stock (mM): "))
+    nacl_final = float(input("Please enter the NaCl final (mM): "))
+    mg_stock = float(input("Please enter the MgC12 stock (mM): "))
+    mg_final = float(input("Please enter the MgC12 final (mM): "))
+
+    # step1 finds amount of NaCl to add
+    step1 = f"Add {final_vol * (nacl_final / nacl_stock)} ml NaCl\n"
+
+    # step2 finds amount of MgCl2 to add
+    step2 = f"Add {final_vol * (mg_final / mg_stock)} ml MgCl2\n"
+
+    # step3 finds final volume
+    step3 = f"Add water to a final volume of {final_vol} ml and mix"
+
+    # print outputs
+    print(step1 + step2 + step3)
+
+main()
